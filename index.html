@@ -1245,11 +1245,13 @@ footer { background:var(--bg-2); border-top:1px solid var(--rule); padding:3rem;
         </div>
       </div>
       <div class="reveal-r">
-        <div class="form-field"><label class="form-lbl">Name</label><input type="text" class="form-inp" placeholder="Your full name"/></div>
-        <div class="form-field"><label class="form-lbl">Email</label><input type="email" class="form-inp" placeholder="your@email.com"/></div>
-        <div class="form-field"><label class="form-lbl">Subject</label><input type="text" class="form-inp" placeholder="Project inquiry / Collaboration"/></div>
-        <div class="form-field"><label class="form-lbl">Message</label><textarea class="form-ta" placeholder="Tell me about your project..."></textarea></div>
-        <button class="btn-send">Send Message &rarr;</button>
+        <form action="https://formspree.io/f/xgoneqbb" method="POST">
+          <div class="form-field"><label class="form-lbl">Name</label><input type="text" name="name" class="form-inp" placeholder="Your full name" required/></div>
+          <div class="form-field"><label class="form-lbl">Email</label><input type="email" name="email" class="form-inp" placeholder="your@email.com" required/></div>
+          <div class="form-field"><label class="form-lbl">Subject</label><input type="text" name="subject" class="form-inp" placeholder="Project inquiry / Collaboration"/></div>
+          <div class="form-field"><label class="form-lbl">Message</label><textarea name="message" class="form-ta" placeholder="Tell me about your project..." required></textarea></div>
+          <button type="submit" class="btn-send">Send Message &rarr;</button>
+        </form>
       </div>
     </div>
   </div>
